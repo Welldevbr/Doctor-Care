@@ -6,7 +6,7 @@
   --primary-color: hsl(170, 100%, 26%);
   --headline: hsl(105, 100%, 5%);
   --paragraph:hsl(104, 16%, 24%);
-  --brand-light: hsl(148, 23%, 89%);
+  --brand-light: hsl(152, 23%, 89%);
   --brand-beige: hsl(39, 100%, 97%);
 
 
@@ -19,6 +19,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .wapper {
@@ -97,6 +101,8 @@ header button {
   margin-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
+
+  cursor: pointer;
 }
 
 header img {
@@ -170,4 +176,121 @@ nav.scroll svg:nth-child(1) path{
 
 nav.scroll svg:nth-child(2) path{
   stroke: var(--brand-light);
+}
+
+nav.scroll #icone path{
+  stroke: var(--brand-light);
+}
+
+nav.scroll .menu .social a svg path{
+  fill: var(--primary-color);
+}
+
+#menu {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#menu.show {
+  background: var(--primary-color);
+
+  visibility: visible;
+  opacity: 1;
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid;
+  place-content: center;
+}
+
+#menu.show .top{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  gap: 24rem;
+  margin-top: 2.7rem;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+#menu.show ul {
+  list-style-type: none;
+  display: grid;
+  gap: 4.8rem;
+  
+}
+
+#menu.show ul li a {
+  color: var(--brand-light);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+#menu.show ul li a::after {
+  content: '';
+  background: var(--brand-light);
+  width: 0%;
+  height: 0.2rem;
+
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+
+  transition: all ease-in-out 0.2s;
+}
+
+#menu.show ul li a:hover::after {
+  width: 100%;
+}
+
+#menu.show ul li #btn {
+  color: var(--primary-color);
+  background: var(--brand-light);
+
+  font-size: 1.8rem;
+  font-weight: 700;
+  
+  padding: 1rem 1.75rem;
+
+  border-radius: 4rem;
+  text-transform: uppercase;
+  border: 1px solid var(--brand-light);
+}
+
+#menu.show ul li #btn:hover {
+  color: var(--brand-light);
+  background: var(--primary-color);
+
+  border: 1px solid var(--brand-light);
+  transition: all ease-in-out 0.3s;
+}
+
+#menu.show .social {
+  
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+#menu.show .social a{
+  text-decoration: none;
+  margin-top: 8rem;
+
+  transition: all ease-in-out 0.2s;
+}
+
+#menu.show .social a:hover {
+  margin-top: 7.5rem;
 }
