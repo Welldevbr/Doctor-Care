@@ -8,12 +8,10 @@ function onScroll() {
   }
 }
 
-const menu = document.querySelector('nav #menu')
+function openMenu() {
+  document.body.classList.add('show')
+}
 
-const toggle = document.querySelectorall('nav .toggle')
-
-for (const element of toggle) {
-  element.addEventListener('click', function () {
-    nav.classList.toggle('show')
-  })
+function closeMenu() {
+  document.body.classList.remove('show')
 }
