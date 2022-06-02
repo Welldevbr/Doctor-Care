@@ -439,6 +439,31 @@ line-height: 150%;
   color: var(--paragraph);
 }
 
+/*-------- Feedbacks --------*/
+
+#feedbacks {
+  background: #fff;
+}
+
+#feedbacks header {
+  margin-bottom: 3.2rem;
+}
+
+#feedbacks .testimonials .swiper-wapper{
+  display: grid;
+  gap: 2rem;
+}
+#feedbacks .testimonial {
+  background: var(--brand-beige);
+
+  text-align: left;
+  
+  padding: 2.4rem;
+  border-radius: .6rem;
+
+  border: 0.2rem solid var(--brand-light);
+}
+
 /*-------- Contact --------*/
 
 #contact {
@@ -498,7 +523,7 @@ footer {
 
   text-align: left;
   padding-block: 6rem;
-  padding-inline: 2.6rem;
+  padding-left: 7.5rem;
 
   position: relative;
 }
@@ -525,10 +550,12 @@ footer .text p {
 
   font-Size: 1.6rem;
   line-height: 2.083rem;
+
+  opacity: 80%;
 }
 
 footer .social-links {
   position: absolute;
   left: 0;
-  margin-left: 2.6rem;
+  margin-left: 7.5rem;
 }
