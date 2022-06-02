@@ -15,3 +15,11 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove('show')
 }
+
+const links = document.querySelectorAll('nav ul li a')
+
+for (const link of links) {
+  link.addEventListener('click', function () {
+    document.body.classList.remove('show')
+  })
+}

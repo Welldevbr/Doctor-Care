@@ -44,6 +44,8 @@ body {
   text-align: center;
 
   overflow: overlay;
+
+  background: var(--brand-green-light);
 }
 
 ul {
@@ -52,6 +54,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+section {
+  padding-block: 10rem;
 }
 
 /*-------- HEADER --------*/
@@ -115,8 +121,7 @@ header button {
   width: 26.3rem;
 
   margin-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 
   cursor: pointer;
 }
@@ -344,80 +349,186 @@ body.show button path {
 
 /*-------- Services --------*/
 
-main {
-  background: var(--brand-green-light);
-  width: 100%; 
-}
-
-.services {
-  width: 100%;
-  background: var(--brand-green-light);
-  margin-block: 10rem;
-}
-
-.title {
+#services header h4 {
   
-  margin-bottom: 6rem;
-  
-}
-
-.title h4 {
-  font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.4rem;
   line-height: 150%;
+  letter-spacing: 0.08rem;
+
+  text-transform: uppercase;
 
   color: var(--primary-color);
   margin-bottom: 1.6rem;
 }
 
-.title h1 {
+#services header h2 {
   font-size: 3rem;
   color: var(--headline);
-  font-weight: 700;
   line-height: 3.9rem;
-  text-align: center;
 
-  margin-inline: auto;
-  margin-bottom: 2.4rem;
+  margin-bottom: 6rem;
 }
 
-.cards {
-  display: flex;
-  flex-direction: column;
+#services .cards {
+  display: grid;
   gap: 3.2rem;
+
 }
 
-.card {
+#services .cards .card {
   background: #fff;
-  width: 32.7rem;
-  height: 20.7rem;
+  padding: 2.4rem;
 
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 
   text-align: left;
-  display: grid;
-  gap: 1.6rem;
   align-items: center;
 } 
- 
-.card svg,
-.card h1,
-.card p {
-  margin-inline: 2.4rem;
-}
 
-.card svg {
-  margin-top: 2.4rem;
-}
-
-.card h1 {
+#services .cards .card h3 {
   color: var(--headline);
   font-size: 2.4rem;
+
+  margin-block: 1.6rem;
 }
 
-.card p {
+#services .cards .card p {
   font-size: 1.4rem;
-  margin-bottom: 2.4rem;
   color: var(--paragraph);
+}
+
+/*-------- About --------*/
+
+#about {
+  text-align: left;
+  background: #fff;
+}
+
+#about header {
+  display: grid;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+#about header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
+}
+
+#about header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+}
+
+#about .content {
+  display: grid;
+  gap: 6rem;
+}
+
+#about .content p {
+  font-size: 1.6rem;
+line-height: 150%;
+  color: var(--paragraph);
+}
+
+/*-------- Contact --------*/
+
+#contact {
+  text-align: left;
+}
+
+#contact h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+
+  margin-bottom: 3.2rem;
+}
+
+#contact .infors {
+  display: grid;
+  gap: 1.6rem;
+}
+
+#contact .infors .infor {
+  display: flex;
+  align-items: center;
+
+  gap: .8rem;
+}
+
+#contact button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  background: var(--primary-color);
+  color: #fff;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 4rem;
+
+  height: 6.2rem;
+  width: 26.3rem;
+
+  margin-top: 3.2rem;
+  margin-bottom: 6rem;
+
+  cursor: pointer;
+}
+
+/*-------- Footer --------*/
+
+footer {
+  background: var(--primary-color);
+
+  text-align: left;
+  padding-block: 6rem;
+  padding-inline: 2.6rem;
+
+  position: relative;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo svg path {
+  fill: var(--brand-beige);
+}
+
+footer .text {
+  display: grid;
+  gap: 1.2rem;
+
+  margin-top: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+footer .text p {
+  color: var(--brand-beige);
+
+  font-Size: 1.6rem;
+  line-height: 2.083rem;
+}
+
+footer .social-links {
+  position: absolute;
+  left: 0;
+  margin-left: 2.6rem;
 }
