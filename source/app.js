@@ -23,3 +23,5 @@ for (const link of links) {
     document.body.classList.remove('show')
   })
 }
+
+ScrollReveal().reveal('#home')

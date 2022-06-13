@@ -229,18 +229,16 @@ body.show > :not(nav) {
 body.show .open-menu {
   visibility: hidden;
   opacity: 0;
+}
 
-  position: relative;
-  top: -100rem;
-
-  transition: .3s;
+.menu {
+  transform: translateY(100%);
 }
 
 body.show .menu,
 body.show .close-menu{
   visibility: visible;
   opacity: 1;
-  top: 0;
 }
 
 body.show .menu {
@@ -257,6 +255,9 @@ body.show .menu {
 
   display: grid;
   place-content: center;
+
+  transition: ease-in-out 400ms;
+  transform: translateY(0);
 }
 
 body.show nav{
